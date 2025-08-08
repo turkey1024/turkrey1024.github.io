@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者作品集 | turkey1024</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            background-color: var(--dark-color);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+        }
+        
+        .projects {
+            padding: 3rem 0;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--text-light);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+        }
+        
+        .project-description {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .project-link:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>开发者作品集</h1>
+            <p>展示我的编程项目和作品</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="container">
+            <h2>欢迎来到我的开发者作品集</h2>
+            <p>这里展示了我使用各种技术开发的项目和作品</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>我的项目</h2>
+            <div class="project-grid">
+                <!-- 番茄钟项目 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #e74c3c;">
+                        ⏱️
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">番茄工作法时钟</h3>
+                        <div>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <p class="project-description">
+                            一个基于番茄工作法的时间管理工具，帮助提高工作效率和专注力。
+                        </p>
+                        <a href="https://turkey1024.github.io/clock" class="project-link" target="_blank">查看项目</a>
+                    </div>
+                </div>
+                
+                <!-- 图片字符转换器 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #3498db;">
+                        🖼️
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">图片字符转换器</h3>
+                        <div>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas API</span>
+                            <span class="tech-tag">图像处理</span>
+                        </div>
+                        <p class="project-description">
+                            将图片转换为ASCII字符艺术的有趣工具，支持多种输出格式。
+                        </p>
+                        <a href="https://turkey1024.github.io/change" class="project-link" target="_blank">查看项目</a>
+                    </div>
+                </div>
+                
+                <!-- 设备状态检测器 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #2ecc71;">
+                        📱
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">设备状态检测器</h3>
+                        <div>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Web API</span>
+                            <span class="tech-tag">设备检测</span>
+                        </div>
+                        <p class="project-description">
+                            检测用户设备信息的工具，包括浏览器、操作系统、网络状态等。
+                        </p>
+                        <a href="https://turkey1024.github.io/hhh" class="project-link" target="_blank">查看项目</a>
+                    </div>
+                </div>
+                
+                <!-- Emscripten移植游戏 -->
+                <div class="project-card">
+                    <div class="project-image" style="background-color: #9b59b6;">
+                        🎮
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LastTrainHome (Emscripten移植)</h3>
+                        <div>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Emscripten</span>
+                            <span class="tech-tag">WebAssembly</span>
+                            <span class="tech-tag">游戏开发</span>
+                        </div>
+                        <p class="project-description">
+                            使用Emscripten将C++游戏移植到Web平台的演示项目。
+                        </p>
+                        <a href="https://turkey1024.github.io/LastTrainHome" class="project-link" target="_blank">查看项目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about" style="padding: 3rem 0; background-color: #f1f1f1;">
+        <div class="container">
+            <h2>关于我</h2>
+            <p>
+                我是一名全栈开发者，热衷于使用各种技术构建有趣和实用的项目。
+                我的技能包括JavaScript、HTML/CSS、C++以及WebAssembly等。
+            </p>
+            <p>
+                我喜欢探索新技术并将其应用到实际项目中，特别是那些能够提升用户体验和性能的技术。
+            </p>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact" style="padding: 3rem 0;">
+        <div class="container">
+            <h2>联系方式</h2>
+            <p>如果您对我的项目感兴趣或有任何问题，欢迎通过以下方式联系我：</p>
+            <p>Email: <a href="mailto:turkey1024@example.com">turkey1024@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/turkey1024" target="_blank">github.com/turkey1024</a></p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 turkey1024 开发者作品集. 保留所有权利.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
